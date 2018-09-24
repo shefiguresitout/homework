@@ -22,10 +22,35 @@ public class Elevator {
     {
 	this.currentFloor=1;
 	this.travelDirection=1;
-	this.passengersForFloor = new int[totalPassengers];
+	this.passengersForFloor = new int[totalFloors];
     }
 
-    public String toString ()
+    public void move()
+    {
+	/**  Print out current settings
+	 */
+	this.toString();
+
+    	/** If elevator is on top floor, reverse direction
+	 */
+	if (this.currentFloor==totalFloors) {
+	    this.travelDirection=-1;
+	}
+	
+	/** If elevator is on ground floor, reverse direction
+	 */
+	if (this.currentFloor==groundFloor) {
+	    travelDirection=1;
+	}
+
+	/** Zero out passengers for current floor
+	 *  Move elevator by one floor
+	 **/
+        this.passengersForFloor[this.currentFloor]=0;
+	this.currentFloor += travelDirection;
+}
+    
+    public String toString()
     {
 	for (int i=(groundFloor-1); i < totalFloors; i++) {
 	totalPassengers += this.passengersForFloor[i];

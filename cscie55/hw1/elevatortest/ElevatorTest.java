@@ -13,14 +13,19 @@ import cscie55.hw1.elevator.Elevator;
 public class ElevatorTest {
    public static void main(String[] args) {
        Elevator myElevator = new Elevator();
-		/* myElevator.boardPassenger(3);
+       /*
+       myElevator.boardPassenger(3);
        myElevator.boardPassenger(3);
        myElevator.boardPassenger(5);
-       i = groundFloor to (topFloor*2-1)
-       {
-       move();
-       }
        */
+
+       int numberOfFloorsToVisit=13;
+       for (int i = 0; i <= numberOfFloorsToVisit; i++)
+       {
+	   System.out.println(myElevator.toString());
+	   myElevator.move();
+       }
+       
    }
 
 }
