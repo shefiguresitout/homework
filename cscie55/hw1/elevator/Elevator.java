@@ -27,10 +27,6 @@ public class Elevator {
 
     public void move()
     {
-	/**  Print out current settings
-	 */
-	this.toString();
-
     	/** If elevator is on top floor, reverse direction
 	 */
 	if (this.currentFloor==totalFloors) {
@@ -44,18 +40,25 @@ public class Elevator {
 	}
 
 	/** Zero out passengers for current floor
+	 *  Print out current settings
 	 *  Move elevator by one floor
-	 **/
-        this.passengersForFloor[this.currentFloor]=0;
+	 */
+        this.passengersForFloor[this.currentFloor - 1]=0;
+	this.toString();
 	this.currentFloor += travelDirection;
 }
+
+    public void boardPassenger(int destinationFloor) {
+	this.passengersForFloor[destinationFloor - 1] += 1;
+    }
     
     public String toString()
     {
+	totalPassengers = 0;
 	for (int i=(groundFloor-1); i < totalFloors; i++) {
 	totalPassengers += this.passengersForFloor[i];
 	}
-	if (totalFloors == 1)
+	if (totalPassengers == 1)
 	    {
 		return "Floor " + this.currentFloor + ":" + totalPassengers + " passenger";
 	    }
