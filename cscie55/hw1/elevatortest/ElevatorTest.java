@@ -17,10 +17,9 @@ public class ElevatorTest {
        myElevator.boardPassenger(3);
        myElevator.boardPassenger(5);
        
-       int numberOfFloorsToVisit=12;
-       for (int i = 0; i <= numberOfFloorsToVisit; i++)
+       int numberOfFloorsToVisit=13;
+       for (int i = 0; i < numberOfFloorsToVisit; i++)
        {
-	   System.out.println(myElevator.toString());
 	   myElevator.move();
        }
        
