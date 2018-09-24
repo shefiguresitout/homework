@@ -18,11 +18,11 @@ public class Elevator {
     private int[] passengersForFloor;
     private int totalPassengers;
 
-    public Elevator( int currentFloor, int travelDirection, int[] passengersForFloor)
+    public Elevator()
     {
-	this.currentFloor=currentFloor;
-	this.travelDirection=travelDirection;
-	this.passengersForFloor = passengersForFloor;
+	this.currentFloor=1;
+	this.travelDirection=1;
+	this.passengersForFloor = new int[totalPassengers];
     }
 
     public String toString ()

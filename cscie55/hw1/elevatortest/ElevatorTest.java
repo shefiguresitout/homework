@@ -12,8 +12,7 @@ package cscie55.hw1.elevatortest;
 import cscie55.hw1.elevator.Elevator;
 public class ElevatorTest {
    public static void main(String[] args) {
-       int[] passengersForFloor= new int[7];
-       Elevator myElevator = new Elevator(1, 1, passengersForFloor);
+       Elevator myElevator = new Elevator();
 		/* myElevator.boardPassenger(3);
        myElevator.boardPassenger(3);
        myElevator.boardPassenger(5);
