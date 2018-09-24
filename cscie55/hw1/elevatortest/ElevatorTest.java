@@ -1,0 +1,29 @@
+package cscie55.hw1.elevatortest;
+/**
+ * Create an elevator object
+ * Board two passengers for floor 3
+ * Board one passenger for floor 5
+ * Move from ground to top floor
+ * Move from top to ground floor
+ * Print elevator state before first move
+ * Print elevator state after each move
+ */
+
+import cscie55.hw1.elevator.Elevator;
+public class ElevatorTest {
+   public static void main(String[] args) {
+       int[] passengersForFloor= new int[7];
+       Elevator myElevator = new Elevator(1, 1, passengersForFloor);
+		/* myElevator.boardPassenger(3);
+       myElevator.boardPassenger(3);
+       myElevator.boardPassenger(5);
+       i = groundFloor to (topFloor*2-1)
+       {
+       move();
+       }
+       */
+   }
+
+}
+ 
+
